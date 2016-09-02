@@ -10,7 +10,7 @@
 
 @implementation BDGBorderedView
 
--(instancetype)initWithFrame:(NSCoder *)frame
+-(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if(!self) {
