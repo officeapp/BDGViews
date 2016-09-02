@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description    = 'Great UIView subclasses with IBInspectable properties to quickly have a shadowed view, rounded view, circular view, etc.'
   s.homepage       = 'https://github.com/BobDG/BDGViews'
   s.authors        = {'Bob de Graaf' => 'graafict@gmail.com'}
-  s.source         = { :git => 'https://github.com/BobDG/BDGViews.git', :tag => '0.0.1' }
+  s.source         = { :git => 'https://github.com/BobDG/BDGViews.git', :tag => '0.0.2' }
   s.source_files   = '*.{h,m}'  
   s.frameworks     = 'UIKit'
   s.platform       = :ios
