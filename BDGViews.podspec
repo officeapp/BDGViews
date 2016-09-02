@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name           = 'BDGViews'
-  s.version        = '0.0.1'
+  s.version        = '0.0.2'
   s.summary        = 'Great UIView subclasses with IBInspectables'
   s.license 	   = 'MIT'
   s.description    = 'Great UIView subclasses with IBInspectable properties to quickly have a shadowed view, rounded view, circular view, etc.'
