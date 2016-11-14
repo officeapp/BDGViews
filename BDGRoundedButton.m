@@ -17,11 +17,7 @@
     if(!self) {
         return nil;
     }
-    
-    //Circular properties
-    self.opaque = NO;
-    self.clipsToBounds = TRUE;
-    
+    [self doCorner];
     return self;
 }
 
@@ -32,22 +28,34 @@
     if(!self) {
         return nil;
     }
-    
-    //Circular properties
-    self.opaque = NO;
-    self.clipsToBounds = TRUE;
-    
+    [self doCorner];
     return self;
 }
 
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    //IBInspectables
+    [self doCorner];
+}
+
+-(void)prepareForInterfaceBuilder
+{
+    [super prepareForInterfaceBuilder];
+    [self doCorner];
+}
+
+-(void)doCorner
+{
+    self.opaque = false;
+    self.clipsToBounds = true;
     self.layer.borderWidth = self.borderWidth;
-    self.layer.cornerRadius = self.cornerRadius;
     self.layer.borderColor = self.borderColor.CGColor;
+    self.layer.cornerRadius = self.cornerRadius;
+}
+
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    [self doCorner];
 }
 
 @end

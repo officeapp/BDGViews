@@ -18,11 +18,9 @@
         return nil;
     }
     
-    //Circular properties
-    self.opaque = NO;
-    self.clipsToBounds = TRUE;
-    self.layer.cornerRadius = [self radiusForBounds:self.bounds];
-    
+    self.layer.borderWidth = self.borderWidth;
+    self.layer.borderColor = self.borderColor.CGColor;
+    [self doCorner];
     return self;
 }
 
@@ -33,12 +31,9 @@
     if(!self) {
         return nil;
     }
-    
-    //Circular properties
-    self.opaque = NO;
-    self.clipsToBounds = TRUE;
-    self.layer.cornerRadius = [self radiusForBounds:self.bounds];
-    
+    self.layer.borderWidth = self.borderWidth;
+    self.layer.borderColor = self.borderColor.CGColor;
+    [self doCorner];
     return self;
 }
 
@@ -46,14 +41,30 @@
 {
     [super awakeFromNib];
     
-    //IBInspectables
     self.layer.borderWidth = self.borderWidth;
     self.layer.borderColor = self.borderColor.CGColor;
+    [self doCorner];
+}
+
+-(void)prepareForInterfaceBuilder
+{
+    [super prepareForInterfaceBuilder];
+    [self doCorner];
+}
+
+-(void)doCorner
+{
+    //IBInspectables
+#if TARGET_INTERFACE_BUILDER
+    self.layer.borderWidth = self.borderWidth;
+    self.layer.borderColor = self.borderColor.CGColor;
+#endif
+    self.layer.cornerRadius = [self radiusForBounds:self.frame];
 }
 
 -(void)setBounds:(CGRect)bounds
 {
-    self.layer.cornerRadius = [self radiusForBounds:bounds];
+    //[self doCorner];
     [super setBounds:bounds];
 }
 
@@ -62,30 +73,10 @@
     return fminf(bounds.size.width, bounds.size.height) / 2;
 }
 
-/*-(id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event
+-(void)layoutSubviews
 {
-    id<CAAction> action = [super actionForLayer:layer forKey:event];
-    
-    if ([event isEqualToString:@"cornerRadius"])
-    {
-        CABasicAnimation *boundsAction = (CABasicAnimation *)[self actionForLayer:layer forKey:@"bounds"];
-        if ([boundsAction isKindOfClass:[CABasicAnimation class]] && [boundsAction.fromValue isKindOfClass:[NSValue class]])
-        {
-            CABasicAnimation *cornerRadiusAction = [CABasicAnimation animationWithKeyPath:@"cornerRadius"];
-            cornerRadiusAction.delegate = boundsAction.delegate;
-            cornerRadiusAction.duration = boundsAction.duration;
-            cornerRadiusAction.fillMode = boundsAction.fillMode;
-            cornerRadiusAction.timingFunction = boundsAction.timingFunction;
-            
-            CGRect fromBounds = [(NSValue *)boundsAction.fromValue CGRectValue];
-            CGFloat fromRadius = [self radiusForBounds:fromBounds];
-            cornerRadiusAction.fromValue = [NSNumber numberWithFloat:fromRadius];
-            
-            return cornerRadiusAction;
-        }
-    }
-    
-    return action;
-}*/
+    [super layoutSubviews];
+    [self doCorner];
+}
 
 @end
