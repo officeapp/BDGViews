@@ -10,20 +10,19 @@
 
 @implementation BDGShadowedView
 
--(void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    [self doShadow];
-}
-
 -(void)prepareForInterfaceBuilder
 {
     [super prepareForInterfaceBuilder];
-    [self doShadow];
+    [self createShadow];
 }
 
--(void)doShadow
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self createShadow];
+}
+
+-(void)createShadow
 {
     self.layer.shadowOffset = self.shadowOffset;
     self.layer.shadowRadius = self.shadowRadius;

@@ -10,39 +10,19 @@
 
 @implementation BDGBorderedView
 
--(instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if(!self) {
-        return nil;
-    }
-    [self doCorner];
-    return self;
-}
-
--(instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if(!self) {
-        return nil;
-    }
-    [self doCorner];
-    return self;
-}
-
--(void)awakeFromNib
-{
-    [super awakeFromNib];
-    [self doCorner];
-}
-
 -(void)prepareForInterfaceBuilder
 {
     [super prepareForInterfaceBuilder];
-    [self doCorner];
+    [self createBorder];
 }
 
--(void)doCorner
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self createBorder];
+}
+
+-(void)createBorder
 {
     self.opaque = false;
     self.clipsToBounds = true;
@@ -51,9 +31,4 @@
     self.layer.cornerRadius = self.cornerRadius;
 }
 
--(void)layoutSubviews
-{
-    [super layoutSubviews];
-    [self doCorner];
-}
 @end
