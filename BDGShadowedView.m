@@ -14,7 +14,17 @@
 {
     [super awakeFromNib];
     
-    //IBInspectables
+    [self doShadow];
+}
+
+-(void)prepareForInterfaceBuilder
+{
+    [super prepareForInterfaceBuilder];
+    [self doShadow];
+}
+
+-(void)doShadow
+{
     self.layer.shadowOffset = self.shadowOffset;
     self.layer.shadowRadius = self.shadowRadius;
     self.layer.shadowOpacity = self.shadowOpacity;
