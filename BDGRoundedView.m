@@ -17,25 +17,6 @@
     if(!self) {
         return nil;
     }
-    
-    self.opaque = NO;
-    self.clipsToBounds = TRUE;
-    
-    return self;
-}
-
-
-
--(instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if(!self) {
-        return nil;
-    }
-    
-    self.opaque = NO;
-    self.clipsToBounds = TRUE;
-    
     return self;
 }
 
@@ -43,7 +24,16 @@
     [super awakeFromNib];
 }
 
+-(void)prepareForInterfaceBuilder
+{
+    [super prepareForInterfaceBuilder];
+    [self doCorner:self];
+}
+
 -(void)doCorner:(UIView*)viewToCorner {
+    self.opaque = false;
+    self.clipsToBounds = true;
+    
     UIBezierPath *maskPath;
     
     NSUInteger options = 0;
@@ -65,14 +55,6 @@
 -(void)layoutSubviews {
     [super layoutSubviews];
     [self doCorner:self];
-    
-//    TEMP
-//    for (UIView* view in self.subviews) {
-//        [self doCorner:view];
-//        view.clipsToBounds = true;
-//        view.opaque = false;
-//        [view layoutIfNeeded];
-//    }
 }
 
 @end
