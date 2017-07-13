@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B000329A1F177A98000D6CD4 /* BDGTabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B00032991F177A98000D6CD4 /* BDGTabsView.m */; };
 		ED35C5021DD47C5900E66E1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED35C5011DD47C5900E66E1D /* main.m */; };
 		ED35C5051DD47C5900E66E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED35C5041DD47C5900E66E1D /* AppDelegate.m */; };
 		ED35C5081DD47C5900E66E1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED35C5071DD47C5900E66E1D /* ViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B00032981F177A98000D6CD4 /* BDGTabsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDGTabsView.h; sourceTree = "<group>"; };
+		B00032991F177A98000D6CD4 /* BDGTabsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDGTabsView.m; sourceTree = "<group>"; };
 		ED35C4FD1DD47C5900E66E1D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED35C5011DD47C5900E66E1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED35C5031DD47C5900E66E1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 		ED635E851DD9AACC00B6432D /* BDGViews */ = {
 			isa = PBXGroup;
 			children = (
+				B00032981F177A98000D6CD4 /* BDGTabsView.h */,
+				B00032991F177A98000D6CD4 /* BDGTabsView.m */,
 				ED635E861DD9AACC00B6432D /* BDGBorderedView.h */,
 				ED635E871DD9AACC00B6432D /* BDGBorderedView.m */,
 				ED635E881DD9AACC00B6432D /* BDGCircularView.h */,
@@ -194,6 +199,7 @@
 				ED35C5081DD47C5900E66E1D /* ViewController.m in Sources */,
 				ED35C5051DD47C5900E66E1D /* AppDelegate.m in Sources */,
 				ED635E951DD9AACC00B6432D /* BDGRoundedButton.m in Sources */,
+				B000329A1F177A98000D6CD4 /* BDGTabsView.m in Sources */,
 				ED35C5021DD47C5900E66E1D /* main.m in Sources */,
 				ED635E961DD9AACC00B6432D /* BDGRoundedView.m in Sources */,
 				ED635E921DD9AACC00B6432D /* BDGBorderedView.m in Sources */,
