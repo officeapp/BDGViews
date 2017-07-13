@@ -1,6 +1,6 @@
 //
 //  BDGTabsView.m
-//  AMCVUMC
+//  GraafICT
 //
 //  Created by Bob de Graaf on 16-03-17.
 //  Copyright © 2017 GraafICT. All rights reserved.
