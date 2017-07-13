@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lOm-cd-odQ" customClass="BDGBorderedView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOm-cd-odQ" customClass="BDGBorderedView">
                                 <rect key="frame" x="86" y="28" width="203" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -37,9 +37,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RmQ-x8-5Gk" customClass="BDGCircularView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmQ-x8-5Gk" customClass="BDGCircularView">
                                 <rect key="frame" x="137" y="132" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -50,9 +49,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLs-Ln-Z50" customClass="BDGRoundedButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLs-Ln-Z50" customClass="BDGRoundedButton">
                                 <rect key="frame" x="87" y="260" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yn8-7k-Gvp"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -66,9 +67,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dzd-oN-sn2" customClass="BDGRoundedView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dzd-oN-sn2" customClass="BDGRoundedView">
                                 <rect key="frame" x="67" y="336" width="240" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83921568629999999" green="0.047058823530000002" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -85,9 +85,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-Ei-AgQ" customClass="BDGShadowedView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-Ei-AgQ" customClass="BDGShadowedView">
                                 <rect key="frame" x="67" y="461" width="240" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -104,9 +103,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mZZ-SK-arE" customClass="BDGDashedLineView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZZ-SK-arE" customClass="BDGDashedLineView">
                                 <rect key="frame" x="67" y="616" width="240" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
@@ -123,8 +121,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1Z-ag-Xz5" customClass="BDGTabsView">
+                                <rect key="frame" x="16" y="550" width="345" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dzd-oN-sn2" firstAttribute="leading" secondItem="Mdf-Ei-AgQ" secondAttribute="leading" id="2cw-vy-kcu"/>
+                            <constraint firstItem="Mdf-Ei-AgQ" firstAttribute="top" secondItem="Dzd-oN-sn2" secondAttribute="bottom" constant="45" id="2sp-t6-adU"/>
+                            <constraint firstItem="Mdf-Ei-AgQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="461" id="97r-w4-UZs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mZZ-SK-arE" secondAttribute="bottom" constant="41" id="B3t-cE-82R"/>
+                            <constraint firstItem="mZZ-SK-arE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="616" id="C8z-96-k6X"/>
+                            <constraint firstItem="CLs-Ln-Z50" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="260" id="Gut-Mw-iRc"/>
+                            <constraint firstItem="RmQ-x8-5Gk" firstAttribute="top" secondItem="lOm-cd-odQ" secondAttribute="bottom" constant="24" id="HZ3-O2-pE2"/>
+                            <constraint firstItem="RmQ-x8-5Gk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="132" id="Haz-Bu-MlD"/>
+                            <constraint firstItem="lOm-cd-odQ" firstAttribute="centerX" secondItem="RmQ-x8-5Gk" secondAttribute="centerX" id="Kmr-XR-a0d"/>
+                            <constraint firstItem="RmQ-x8-5Gk" firstAttribute="centerX" secondItem="CLs-Ln-Z50" secondAttribute="centerX" id="McB-3Q-6bd"/>
+                            <constraint firstItem="o1Z-ag-Xz5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="550" id="Mux-3y-ILV"/>
+                            <constraint firstItem="Mdf-Ei-AgQ" firstAttribute="leading" secondItem="mZZ-SK-arE" secondAttribute="leading" id="O4J-5O-aEQ"/>
+                            <constraint firstItem="o1Z-ag-Xz5" firstAttribute="top" secondItem="Mdf-Ei-AgQ" secondAttribute="bottom" constant="18" id="O9R-pI-hzf"/>
+                            <constraint firstItem="CLs-Ln-Z50" firstAttribute="centerX" secondItem="Dzd-oN-sn2" secondAttribute="centerX" id="QrS-2N-9ii"/>
+                            <constraint firstItem="CLs-Ln-Z50" firstAttribute="top" secondItem="RmQ-x8-5Gk" secondAttribute="bottom" constant="28" id="Rid-b5-BjT"/>
+                            <constraint firstItem="mZZ-SK-arE" firstAttribute="top" secondItem="o1Z-ag-Xz5" secondAttribute="bottom" constant="24" id="XE8-Ln-yy4"/>
+                            <constraint firstItem="o1Z-ag-Xz5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XkH-11-nCW"/>
+                            <constraint firstItem="Dzd-oN-sn2" firstAttribute="top" secondItem="CLs-Ln-Z50" secondAttribute="bottom" constant="26" id="agH-5b-XV6"/>
+                            <constraint firstItem="RmQ-x8-5Gk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="137" id="d8M-UO-f6g"/>
+                            <constraint firstItem="Dzd-oN-sn2" firstAttribute="trailing" secondItem="Mdf-Ei-AgQ" secondAttribute="trailing" id="e8S-mW-4oo"/>
+                            <constraint firstItem="lOm-cd-odQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="huN-jQ-CUv"/>
+                            <constraint firstItem="RmQ-x8-5Gk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kZv-zD-SEB"/>
+                            <constraint firstItem="lOm-cd-odQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="lFh-Y8-E4V"/>
+                            <constraint firstItem="Mdf-Ei-AgQ" firstAttribute="trailing" secondItem="mZZ-SK-arE" secondAttribute="trailing" id="t7S-jG-aGZ"/>
+                            <constraint firstItem="CLs-Ln-Z50" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="yMm-6I-co3"/>
+                            <constraint firstItem="Dzd-oN-sn2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="yYE-fv-oGC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o1Z-ag-Xz5" secondAttribute="trailing" constant="-2" id="z9N-KW-eI5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="borderedView" destination="lOm-cd-odQ" id="DCH-Oh-FvG"/>
@@ -133,6 +164,7 @@
                         <outlet property="roundedButton" destination="CLs-Ln-Z50" id="6a7-zz-KoM"/>
                         <outlet property="roundedView" destination="Dzd-oN-sn2" id="0GR-aT-nV3"/>
                         <outlet property="shadowedView" destination="Mdf-Ei-AgQ" id="bXu-t3-cSS"/>
+                        <outlet property="tabFilterView" destination="o1Z-ag-Xz5" id="rk0-k6-mHu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
