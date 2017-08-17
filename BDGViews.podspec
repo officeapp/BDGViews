@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.source         = { :git => 'https://github.com/BobDG/BDGViews.git', :tag => s.version.to_s }
   s.source_files   = 'BDGViews/**/*.{h,m}'
   s.frameworks     = 'UIKit'
-  s.platform       = :ios
-  s.requires_arc   = true
+  s.platform       	= :ios, '8.0'
+  s.requires_arc   	= true
 end
