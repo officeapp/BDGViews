@@ -14,6 +14,9 @@
 }
 
 //Styling
+@property(nonatomic) bool centered;
+@property(nonatomic) int cornerRadius;
+@property(nonatomic) bool fillBackground;
 @property(nonatomic) bool upperCase;
 @property(nonatomic) float lineHeight;
 @property(nonatomic) float paddingSides;
