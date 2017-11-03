@@ -144,9 +144,15 @@
             }
             
             //Animate line/offset changes
+            float lineOriginX = label.frame.origin.x;
+            float lineWidth = label.frame.size.width;
+            if(self.lineWidthExcludesPadding) {
+                lineOriginX += self.paddingBetween;
+                lineWidth -= self.paddingBetween * 2;
+            }
             [UIView animateWithDuration:animationDuration animations:^{
                 self.scrollView.contentOffset = CGPointMake(offset, 0);
-                self.lineView.frame = CGRectMake(label.frame.origin.x, self.scrollView.frame.size.height-2, label.frame.size.width, self.lineHeight);
+                self.lineView.frame = CGRectMake(lineOriginX, self.scrollView.frame.size.height-self.lineHeight, lineWidth, self.lineHeight);
             }];
         }
         else {
