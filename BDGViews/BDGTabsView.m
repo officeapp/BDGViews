@@ -180,10 +180,11 @@
 -(void)tagSelected:(UITapGestureRecognizer *)recognizer
 {
     NSUInteger index = [self.tagLabelsArray indexOfObject:recognizer.view];
-    self.activeTag = self.tags[index];    
+    id selectedTag = self.tags[index];
     if(self.tagSelected) {
-        self.tagSelected(self.tags[index]);
+        self.tagSelected(selectedTag);
     }
+    self.activeTag = selectedTag;
 }
 
 #pragma mark - Layout
