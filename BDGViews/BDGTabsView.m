@@ -34,6 +34,19 @@
     return self;
 }
 
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if(!self) {
+        return nil;
+    }
+    
+    //Array
+    self.tagLabelsArray = [NSMutableArray new];
+    
+    return self;
+}
+
 -(void)setTags:(NSArray *)tags
 {
     //Set it
